@@ -22,15 +22,6 @@ function AboutPage() {
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    toast({
-      title: "📬 Mensaje recibido",
-      description: "Gracias por escribir. Te responderé pronto (probablemente después de mi tercera taza de café).",
-    });
-    setFormData({ name: '', email: '', message: '' });
-  };
-
   return (
     <>
       <Helmet>
@@ -150,94 +141,14 @@ function AboutPage() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              <input type="hidden" name="form-name" value="contact" />
-              <p className="hidden">
-                <label>
-                  Don’t fill this out if you’re human: <input name="bot-field" />
-                </label>
-              </p>
-              <form
-                name="contact"
-                method="POST"
-                data-netlify="true"
-                netlify-honeypot="bot-field"
-                className="bg-[var(--accent-white)]/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-[var(--primary-turquoise)]/20 shadow-xl"
-              >
-                <div className="space-y-6">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-[var(--text-brown)] mb-2">
-                      Nombre
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 bg-[var(--accent-white)] border-2 border-[var(--primary-turquoise)]/20 rounded-lg focus:outline-none focus:border-[var(--primary-turquoise)] transition-colors text-[var(--text-brown)]"
-                      placeholder="Tu nombre"
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-[var(--text-brown)] mb-2">
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 bg-[var(--accent-white)] border-2 border-[var(--primary-turquoise)]/20 rounded-lg focus:outline-none focus:border-[var(--primary-turquoise)] transition-colors text-[var(--text-brown)]"
-                      placeholder="tu@email.com"
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-[var(--text-brown)] mb-2">
-                      Mensaje
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      required
-                      rows={6}
-                      className="w-full px-4 py-3 bg-[var(--accent-white)] border-2 border-[var(--primary-turquoise)]/20 rounded-lg focus:outline-none focus:border-[var(--primary-turquoise)] transition-colors resize-none text-[var(--text-brown)]"
-                      placeholder="Cuéntame qué tienes en mente..."
-                    />
-                  </div>
-
-                  <Button
-                    type="submit"
-                    className="w-full bg-[var(--primary-turquoise)] hover:bg-[var(--secondary-coral)] text-white py-6 rounded-lg font-medium transition-all hover:scale-105 shadow-lg flex items-center justify-center gap-2"
-                  >
-                    <Send className="w-5 h-5" />
-                    Enviar mensaje
-                  </Button>
-                </div>
-              </form>
-            </motion.div>
-
+          <div className="flex justify-center">
             {/* Contact Info & Social */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="space-y-6"
+              className="space-y-6 w-full max-w-xl"
             >
               {/* Email */}
               <div className="bg-[var(--accent-white)]/60 backdrop-blur-sm rounded-xl p-6 border-2 border-[var(--primary-turquoise)]/20 shadow-lg">
