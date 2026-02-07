@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { BookOpen, Music, Laugh, Camera, Calendar, Ticket } from 'lucide-react';
 import { motion } from 'framer-motion';
+import photo from '@/assets/fotos/ailin poster.jpg';
 
 function HomePage() {
   const upcomingShows = [
@@ -53,7 +54,7 @@ function HomePage() {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <img
-            src="https://horizons-cdn.hostinger.com/59b48c39-2f9f-4fde-9e13-742ca6736d22/foto-ailin-E3KvL.jpg"
+            src={photo}
             alt="Ailin González - Comedian, Writer, and Poet"
             className="w-full h-full object-cover object-[50%_49%]"
           />
@@ -194,7 +195,7 @@ function HomePage() {
                              text-sm sm:text-base"
                 >
                   <Ticket className="w-4 h-4 sm:w-5 sm:h-5" />
-                  <span className="hidden sm:inline">Comprar Tickets</span>
+                  <span className="hidden sm:inline">Tickets</span>
                   <span className="sm:hidden">Tickets</span>
                 </a>
               </motion.div>
