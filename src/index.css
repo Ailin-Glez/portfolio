@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* New Turquoise & Coral Palette for Ailin González */
+    --primary-turquoise: #1DB5A8;
+    --secondary-coral: #FF6B4A;
+    --bg-cream: #FFF8F0;
+    --text-brown: #000000;
+    --text-brown-light: #6B5B52;
+    --accent-white: #FFFBF7;
+
+    --background: 0 0% 100%;
+    --foreground: 20 20% 20%;
+    --card: 30 40% 98%;
+    --card-foreground: 20 20% 20%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 20% 20%;
+    --primary: 175 72% 41%; /* Turquoise HSL approx */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 11 100% 65%; /* Coral HSL approx */
+    --secondary-foreground: 0 0% 100%;
+    --muted: 30 30% 95%;
+    --muted-foreground: 20 10% 45%;
+    --accent: 175 72% 90%;
+    --accent-foreground: 20 20% 20%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 30 20% 88%;
+    --input: 30 20% 88%;
+    --ring: 175 72% 41%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --primary-turquoise: #2DD4C6;
+    --secondary-coral: #FF8A6E;
+    --bg-cream: #1A1A2E;
+    --text-brown: #E8E6E3;
+    --text-brown-light: #A8A0A0;
+    --accent-white: #242442;
+
+    --background: 240 20% 12%;
+    --foreground: 30 10% 90%;
+    --card: 240 18% 16%;
+    --card-foreground: 30 10% 90%;
+    --popover: 240 18% 14%;
+    --popover-foreground: 30 10% 90%;
+    --primary: 175 60% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 11 100% 72%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 240 15% 20%;
+    --muted-foreground: 30 10% 65%;
+    --accent: 240 15% 22%;
+    --accent-foreground: 30 10% 90%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 15% 25%;
+    --input: 240 15% 25%;
+    --ring: 175 60% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-[var(--bg-cream)] text-[var(--text-brown)] font-sans antialiased;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-[var(--text-brown)];
+  }
+}
+
+@layer utilities {
+  .warm-gradient {
+    background: linear-gradient(135deg, rgba(29, 181, 168, 0.2) 0%, rgba(29, 181, 255, 0.2) 50%, rgba(247, 254, 255, 0.5) 100%);
+  }
+
+  .warm-overlay {
+    background: linear-gradient(to bottom, rgba(29,
+      181,
+      255,
+      0.2), rgba(246, 208, 176, 0.2));
+  }
+}
