@@ -158,7 +158,19 @@ function AboutPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <form onSubmit={handleSubmit} className="bg-[var(--accent-white)]/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-[var(--primary-turquoise)]/20 shadow-xl">
+              <input type="hidden" name="form-name" value="contact" />
+              <p className="hidden">
+                <label>
+                  Don’t fill this out if you’re human: <input name="bot-field" />
+                </label>
+              </p>
+              <form
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                netlify-honeypot="bot-field"
+                className="bg-[var(--accent-white)]/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-[var(--primary-turquoise)]/20 shadow-xl"
+              >
                 <div className="space-y-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-[var(--text-brown)] mb-2">
