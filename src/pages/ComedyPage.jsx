@@ -7,8 +7,7 @@ import { useExclusiveVideo } from '@/hooks/useExclusiveVideo';
 import meme1 from '@/assets/fotos/memes/472440558_3395830140550871_198826107512849148_n.jpg';
 import meme2 from '@/assets/fotos/memes/499216851_1661883167806856_6341256020799193747_n.jpg';
 import meme3 from '@/assets/fotos/memes/meme 1.png';
-// Chistes
-import chisteJose from '@/assets/videos/chistes/Jose y el cerquillo.mp4';
+
 import chisteAfeitarse from '@/assets/videos/chistes/Afeitarse.mp4';
 import chisteVarita from '@/assets/videos/chistes/Varita magica.mp4';
 import chistePeludito from '@/assets/videos/chistes/Peludito es mas bonito.mp4';
@@ -21,7 +20,7 @@ function ComedyPage() {
 
   const chistes = [
     { src: chisteAfeitarse, title: 'Afeitarse' },
-    { src: chisteJose, title: 'José y el cerquillo' },
+
     { src: chistePeludito, title: 'Peludito es más bonito' },
     { src: chisteVarita, title: 'Varita mágica' },
   ];
@@ -82,22 +81,20 @@ function ComedyPage() {
               </button>
 
               <div className="flex-1 min-w-0">
-                <AnimatePresence mode="wait">
-                  <motion.div
-                    key={currentMeme}
-                    initial={{ opacity: 0, x: 40 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -40 }}
-                    transition={{ duration: 0.35 }}
-                    className="overflow-hidden rounded-2xl shadow-lg border-2 border-[var(--primary-turquoise)]/20"
-                  >
-                    <img
+                <div className="relative h-[400px] sm:h-[500px] overflow-hidden rounded-2xl shadow-lg border-2 border-[var(--primary-turquoise)]/20 bg-[var(--accent-white)]">
+                  <AnimatePresence mode="wait">
+                    <motion.img
+                      key={currentMeme}
                       src={memes[currentMeme]}
                       alt={`Meme ${currentMeme + 1}`}
-                      className="w-full h-auto object-contain"
+                      initial={{ opacity: 0, x: 40 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      exit={{ opacity: 0, x: -40 }}
+                      transition={{ duration: 0.35 }}
+                      className="absolute inset-0 w-full h-full object-contain"
                     />
-                  </motion.div>
-                </AnimatePresence>
+                  </AnimatePresence>
+                </div>
 
                 {/* Dots */}
                 <div className="flex justify-center gap-2 mt-4">

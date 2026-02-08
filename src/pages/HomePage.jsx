@@ -156,17 +156,17 @@ function HomePage() {
                            flex items-center gap-4 sm:gap-6 p-4 sm:p-5"
               >
                 {/* Date Badge */}
-                <div className="flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 rounded-xl
+                <div className="flex-shrink-0 w-12 h-12 sm:w-20 sm:h-20 rounded-lg sm:rounded-xl
                                 bg-[var(--primary-turquoise)] text-white
                                 flex flex-col items-center justify-center
                                 shadow-lg shadow-[var(--primary-turquoise)]/25">
-                  <span className="text-2xl sm:text-3xl font-bold leading-none">{show.day}</span>
-                  <span className="text-xs sm:text-sm font-medium uppercase tracking-wider opacity-90">{show.month}</span>
+                  <span className="text-lg sm:text-3xl font-bold leading-none">{show.day}</span>
+                  <span className="text-[10px] sm:text-sm font-medium uppercase tracking-wider opacity-90">{show.month}</span>
                 </div>
 
                 {/* Poster */}
                 {show.poster && (
-                  <div className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 rounded-lg overflow-hidden shadow-md">
+                  <div className="hidden sm:block flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden shadow-md">
                     <img
                       src={show.poster}
                       alt={`Poster ${show.title}`}
@@ -177,7 +177,7 @@ function HomePage() {
 
                 {/* Show Info */}
                 <div className="flex-1 min-w-0">
-                  <h3 className="text-lg sm:text-xl font-bold text-[var(--text-brown)] truncate">
+                  <h3 className="text-sm sm:text-xl font-bold text-[var(--text-brown)]">
                     {show.title}
                   </h3>
                 </div>

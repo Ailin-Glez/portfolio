@@ -25,9 +25,9 @@ function MusicPage() {
   useExclusiveVideo();
 
   const efemerides = [
-    { src: efemeride3, title: 'Día mundial de la pizza', date: '9 de febrero' },
-    { src: efemeride1, title: 'Día del amante', date: '13 de febrero' },
-    { src: efemeride2, title: 'Día del sueño', date: '14 de marzo' },
+    { src: efemeride3, title: 'Día mundial de la pizza', day: '9', month: 'FEB', weekday: 'Domingo' },
+    { src: efemeride1, title: 'Día del amante', day: '13', month: 'FEB', weekday: 'Jueves' },
+    { src: efemeride2, title: 'Día del sueño', day: '14', month: 'MAR', weekday: 'Viernes' },
   ];
 
   const canciones = [
@@ -131,7 +131,7 @@ function MusicPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="mb-10 sm:mb-16"
+            className="mb-10 sm:mb-16 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 py-8 sm:py-12 rounded-3xl bg-[rgba(255,107,74,0.08)]"
           >
             <div className="flex items-center gap-3 mb-8 justify-center">
               <Music className="w-6 h-6 text-[var(--secondary-coral)]" />
@@ -173,7 +173,7 @@ function MusicPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="mb-10 sm:mb-16"
+            className="mb-10 sm:mb-16 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 py-8 sm:py-12 rounded-3xl bg-[rgba(29,181,168,0.08)]"
           >
             <div className="flex items-center gap-3 mb-8 justify-center">
               <span className="text-2xl">🇻🇪</span>
@@ -215,14 +215,14 @@ function MusicPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="mb-10 sm:mb-16"
+            className="mb-10 sm:mb-16 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 py-8 sm:py-12 rounded-3xl bg-[rgba(255,107,74,0.06)]"
           >
             <div className="flex items-center gap-3 mb-8 justify-center">
               <CalendarHeart className="w-6 h-6 text-[var(--primary-turquoise)]" />
               <h2 className="text-2xl sm:text-3xl font-bold text-[var(--text-brown)]">Efemérides / Días Raros</h2>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-3 gap-3 sm:gap-5 max-w-3xl mx-auto">
               {efemerides.map((efemeride, index) => (
                 <motion.div
                   key={index}
@@ -230,19 +230,39 @@ function MusicPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-[var(--accent-white)]/60 backdrop-blur-sm rounded-2xl overflow-hidden
-                             border-2 border-[var(--primary-turquoise)]/20 shadow-lg"
+                  className="group"
                 >
-                  <video
-                    src={efemeride.src}
-                    controls
-                    playsInline
-                    className="w-full h-auto"
-                  />
-                  <div className="p-3 sm:p-4">
-                    <p className="text-sm font-semibold text-[var(--text-brown)]">
-                      {efemeride.title}
-                    </p>
+                  {/* Calendar card */}
+                  <div className="bg-[var(--accent-white)] rounded-xl overflow-hidden shadow-lg
+                                  border border-[var(--primary-turquoise)]/20
+                                  hover:shadow-xl transition-all duration-300">
+                    {/* Top red strip — like a real calendar */}
+                    <div className="bg-[var(--secondary-coral)] text-white text-center py-1 sm:py-1.5">
+                      <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest">{efemeride.month}</span>
+                    </div>
+
+                    {/* Day number */}
+                    <div className="text-center py-2 sm:py-3 border-b border-[var(--primary-turquoise)]/10">
+                      <span className="text-3xl sm:text-5xl font-black text-[var(--text-brown)] leading-none">{efemeride.day}</span>
+                    </div>
+
+                    {/* Title */}
+                    <div className="px-2 py-1.5 sm:px-3 sm:py-2 text-center">
+                      <p className="text-[10px] sm:text-xs font-semibold text-[var(--primary-turquoise)] leading-tight">
+                        {efemeride.title}
+                      </p>
+                    </div>
+
+                    {/* Video */}
+                    <div className="px-2 pb-2 sm:px-3 sm:pb-3">
+                      <video
+                        src={efemeride.src}
+                        controls
+                        playsInline
+                        preload="metadata"
+                        className="w-full rounded-lg aspect-[9/16] object-cover"
+                      />
+                    </div>
                   </div>
                 </motion.div>
               ))}

@@ -4,7 +4,6 @@ import { Helmet } from 'react-helmet';
 import { Heart, Sparkles, Mail, Send } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useToast } from '@/components/ui/use-toast';
-import { Button } from '@/components/ui/button';
 import perfilImg from '@/assets/fotos/perfil.jpg';
 
 function AboutPage() {
@@ -46,7 +45,7 @@ function AboutPage() {
               Sobre Mí
             </h1>
             <p className="text-xl text-[var(--text-brown-light)] max-w-2xl mx-auto leading-relaxed italic">
-              "Soy la prueba viviente de que se puede ser escritora y comediante sin sufrir una crisis existencial... O, al menos no todos los días"
+              "Soy la prueba viviente de que se puede ser escritora y comediante sin sufrir una crisis existencial... O al menos, no todos los días"
             </p>
           </motion.div>
 
@@ -86,27 +85,27 @@ function AboutPage() {
                 <div className="space-y-4 text-[var(--text-brown-light)] leading-relaxed">
                   <p>
                     Soy <strong className="text-[var(--text-brown)]">Ailín González, comediante, escritora, poeta y creadora de contenido</strong>.
-                    También toco el ukelele, aunque mis vecinos probablemente preferirían que no lo hiciera a las 2 a.m.
+                    <p>
+                    Mi nombre artístico es <strong className="text-[var(--text-brown)]">"la que toca el ukelele"</strong> —suerte que tengo un ukelele (que no es una guitarrita pequeña), porque si no sería simplemente "la que toca". Hago humor desde la música, rimando versos y chistes mientras me hago la que canto.                  
+                  </p>
                     Mi vida es un delicado equilibrio entre escribir versos melancólicos y hacer chistes sobre lo absurdo de la existencia.
                     Algunos días gana la poesía, otros gana la comedia. La mayoría de los días, gana el café.
                   </p>
-                  <p>
-                    Mi nombre artístico es <strong className="text-[var(--text-brown)]">"la que toca el ukelele"</strong> —suerte que tengo un ukelele (que no es una guitarrita pequeña), porque si no sería simplemente "la que toca". Hago humor desde la música, rimando versos y chistes mientras me hago la que canto. He sido poeta, narradora, diseñadora y estudiante de música a medio tiempo; básicamente, el cóctel perfecto para terminar haciendo stand-up: un cóctel molotov.
-                  </p>
+
                   <p>
                     Vengo del mundo literario. Soy egresada del Centro de Formación Literaria Onelio Jorge Cardoso y he recibido premios como el Premio Poesía de Amor (2011), La Llave Pública (2014) y el Premio de la Ciudad de Nueva Gerona (2015). He publicado libros como <em>Como mienten los boleros</em>, <em>Otra canción para Magda</em>, el poema ilustrado <em>Un regalo diferente</em> y <em>Breve manual para esperar(te)</em>.
                   </p>
                   <p>
                     Después de años habitando las páginas de los libros, entendí que mis versos también necesitaban un micrófono. Así nació esta mutación natural hacia el humor musical y el stand-up, que me llevó a formar parte del grupo{' '}
                     <a href="https://latinoscomedy.com" target="_blank" rel="noopener noreferrer" className="text-[var(--primary-turquoise)] hover:text-[var(--secondary-coral)] underline transition-colors">Latinos Comedy</a>
-                    {' '}y a participar en el primer festival de comedia en español en EE. UU., <em>Miami es un chiste</em> (2025).
+                    {' '}y a participar en el primer festival de comedia en español en EE. UU., <a href='https://miamiesunchiste.com/' target='_blank' rel="noopener noreferrer" className="text-[var(--primary-turquoise)] hover:text-[var(--secondary-coral)] underline transition-colors">Miami es un chiste</a> (2025).
                   </p>
                   <p>
                     He compartido escenario con comediantes como{' '}
                     <a href="https://www.instagram.com/luischataing" target="_blank" rel="noopener noreferrer" className="text-[var(--primary-turquoise)] hover:text-[var(--secondary-coral)] underline transition-colors">Luis Chataing</a>,{' '}
                     <a href="https://www.instagram.com/kabeto" target="_blank" rel="noopener noreferrer" className="text-[var(--primary-turquoise)] hover:text-[var(--secondary-coral)] underline transition-colors">Kabeto</a> y{' '}
                     <a href="https://www.instagram.com/abelardo/" target="_blank" rel="noopener noreferrer" className="text-[var(--primary-turquoise)] hover:text-[var(--secondary-coral)] underline transition-colors">Abelardo</a>,
-                    {' '}y he participado en shows como <em>Comediantes</em> y <em>Tres comediantes hablando sobre comunismo</em>.
+                    {' '}y he participado en los shows de <a href="https://www.chisteinterno.com/" target="_blank" rel="noopener noreferrer" className="text-[var(--primary-turquoise)] hover:text-[var(--secondary-coral)] underline transition-colors">Chiste Interno</a> <em>Comediantes</em> y <em>Tres comediantes hablando sobre comunismo</em>.
                   </p>
                   <p>
                     Mi experiencia en el stand-up todavía cabe en un meme, pero voy sumando pasos, escenarios y aprendizajes. Con suerte, algún día podré completar un libro entero… aunque probablemente sea un libro de memes.

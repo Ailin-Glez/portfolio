@@ -36,7 +36,7 @@ function Header() {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[var(--primary-turquoise)] dark:bg-[#1a2e2e] shadow-md">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[var(--primary-turquoise)] dark:bg-[var(--primary-turquoise)] shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo/Brand */}
@@ -62,7 +62,7 @@ function Header() {
                 to={link.path}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                   isActive(link.path)
-                    ? 'bg-white/90 dark:bg-white/15 text-[var(--primary-turquoise)] dark:text-white shadow-md'
+                    ? 'bg-white/90 text-[var(--primary-turquoise)] shadow-md'
                     : 'text-white hover:bg-white/20'
                 }`}
               >
@@ -105,7 +105,7 @@ function Header() {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.2 }}
-              className="lg:hidden overflow-hidden bg-[var(--primary-turquoise)] dark:bg-[#1a2e2e] border-t border-white/20"
+              className="lg:hidden overflow-hidden bg-[var(--primary-turquoise)] dark:bg-[var(--primary-turquoise)] border-t border-white/20"
             >
               <nav className="py-4 space-y-2">
                 {navLinks.map((link) => (
@@ -115,7 +115,7 @@ function Header() {
                     onClick={() => setMobileMenuOpen(false)}
                     className={`block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200 ${
                       isActive(link.path)
-                        ? 'bg-white/90 dark:bg-white/15 text-[var(--primary-turquoise)] dark:text-white shadow-md mx-2'
+                        ? 'bg-white/90 text-[var(--primary-turquoise)] shadow-md mx-2'
                         : 'text-white hover:bg-white/10 mx-2'
                     }`}
                   >

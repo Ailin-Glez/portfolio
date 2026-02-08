@@ -70,19 +70,20 @@ function GalleryPage() {
 
           {/* Gallery Grid */}
           {images.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 gap-2 sm:gap-3">
               {images.map((image, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  transition={{ duration: 0.4, delay: index * 0.05 }}
                   onClick={() => setSelectedImage(image)}
-                  className="group cursor-pointer relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 aspect-square border-2 border-transparent hover:border-[var(--primary-turquoise)]"
+                  className="group cursor-pointer relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300 aspect-square border-2 border-transparent hover:border-[var(--primary-turquoise)]"
                 >
                   <img
                     src={image.url}
                     alt={image.title}
+                    loading="lazy"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[var(--primary-turquoise)]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
