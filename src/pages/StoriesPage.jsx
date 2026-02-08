@@ -37,12 +37,10 @@ Debes venir. No demores.`,
 de lunares como estrellas.
 Los colecciono, son huellas
 de cada beso indiscreto,
-
 del orgasmo más completo
 o la secreta adicción.
 Te ofrezco, sin restricción,
 mi cuerpo y la potestad
-
 de trazar con libertad
 tu propia constelación.`,
     },
@@ -122,8 +120,9 @@ tu propia constelación.`,
                   </div>
                 </div>
                 <p className="mt-4 text-sm text-[var(--text-brown-light)] leading-relaxed">
-                  Este es un manual sin instrucciones exactas que el lector podrá descubrir desde ambas perspectivas, la de quien permanece, y la de quien escapa. Un viaje a un sitio indefinido impone la separación de una pareja. Digo sitio indefinido, porque este libro está compuesto por pequeñas radiografías que reflejan la angustia, la incertidumbre, el amor, las dudas y el deseo; pero Ailín nunca nos hablará de esa otra ciudad que amenaza con retenerla. Abolidos los contextos y las ciudades, queda un diálogo entre dos amantes, un diálogo que Ailín sostiene con destreza, empleando distintas formas métricas como el soneto, la décima y el romance, entrelazados con haikus, inventarios, telegramas, y preguntas que no esperan respuesta, porque acaso suponen el reencuentro.
+                  "Este es un manual sin instrucciones exactas que el lector podrá descubrir desde ambas perspectivas, la de quien permanece, y la de quien escapa. Un viaje a un sitio indefinido impone la separación de una pareja. Digo sitio indefinido, porque este libro está compuesto por pequeñas radiografías que reflejan la angustia, la incertidumbre, el amor, las dudas y el deseo; pero Ailín nunca nos hablará de esa otra ciudad que amenaza con retenerla. Abolidos los contextos y las ciudades, queda un diálogo entre dos amantes, un diálogo que Ailín sostiene con destreza, empleando distintas formas métricas como el soneto, la décima y el romance, entrelazados con haikus, inventarios, telegramas, y preguntas que no esperan respuesta, porque acaso suponen el reencuentro".
                 </p>
+                <p className="font-medium mt-6 text-md text-[var(--text-brown)]">Daniel Zayas</p>
               </a>
 
               {/* Poem Carousel */}

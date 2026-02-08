@@ -67,7 +67,7 @@ function HomePage() {
           className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8
              text-center flex flex-col
              pt-6 sm:pt-10 md:pt-20
-             md:translate-y-36"
+             md:translate-y-48"
         >
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -89,9 +89,8 @@ function HomePage() {
                     to={button.path}
                     className="group relative overflow-hidden rounded-2xl
                                p-4 md:p-6
-                               bg-[var(--accent-white)]/70 backdrop-blur-md
-                               border border-[var(--accent-white)]/60
-                               dark:border-[var(--primary-turquoise)]/30
+                               bg-[rgba(45,212,198,0.5)] backdrop-blur-md
+                               border border-[rgba(45,212,198,1)]
                                hover:bg-[var(--secondary-coral)]
                                hover:border-[var(--secondary-coral)]
                                transition-all duration-300
@@ -103,14 +102,14 @@ function HomePage() {
                                md:aspect-square
                                text-left md:text-center"
                   >
-                    <Icon className="w-6 h-6 md:w-8 md:h-8 text-[var(--text-brown)] group-hover:text-white transition-colors duration-300" />
+                    <Icon className="w-6 h-6 md:w-8 md:h-8 text-black group-hover:text-white transition-colors duration-300" />
 
                     <div className="flex flex-col">
-                      <span className="text-sm md:text-lg font-bold text-[var(--text-brown)] group-hover:text-white transition-colors duration-300">
+                      <span className="text-sm md:text-lg font-bold text-black group-hover:text-white transition-colors duration-300">
                         {button.label}
                       </span>
 
-                      <span className="hidden md:block text-sm text-[var(--text-brown)] group-hover:text-white/90 transition-colors duration-300">
+                      <span className="hidden md:block text-sm text-black/80 group-hover:text-white/90 transition-colors duration-300">
                         {button.subtitle}
                       </span>
                     </div>
