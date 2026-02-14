@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MainLayout from './layouts/MainLayout.jsx';
 import HomePage from './pages/HomePage.jsx';
-import PoemsPage from './pages/PoemsPage.jsx';
 import StoriesPage from './pages/StoriesPage.jsx';
 import ComedyPage from './pages/ComedyPage.jsx';
 import MusicPage from './pages/MusicPage.jsx';
@@ -19,8 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<MainLayout />}>
           <Route index element={<HomePage />} />
-          <Route path="poemas" element={<PoemsPage />} />
-          <Route path="cuentos" element={<StoriesPage />} />
+          <Route path="literatura" element={<StoriesPage />} />
           <Route path="comedia" element={<ComedyPage />} />
           <Route path="musica" element={<MusicPage />} />
           <Route path="galeria" element={<GalleryPage />} />

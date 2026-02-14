@@ -5,7 +5,7 @@ import { BookMarked, PenTool, Book, Feather, ChevronLeft, ChevronRight } from 'l
 import { AnimatePresence } from 'framer-motion';
 import { motion } from 'framer-motion';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog.jsx';
-import cubiertaImg from '@/assets/fotos/cubierta lg.jpg';
+import cubiertaImg from '@/assets/fotos/cubierta lg.webp';
 
 function StoriesPage() {
   const [selectedStory, setSelectedStory] = useState(null);
@@ -119,10 +119,6 @@ tu propia constelación.`,
                     </span>
                   </div>
                 </div>
-                <p className="mt-4 text-sm text-[var(--text-brown-light)] leading-relaxed">
-                  "Este es un manual sin instrucciones exactas que el lector podrá descubrir desde ambas perspectivas, la de quien permanece, y la de quien escapa. Un viaje a un sitio indefinido impone la separación de una pareja. Digo sitio indefinido, porque este libro está compuesto por pequeñas radiografías que reflejan la angustia, la incertidumbre, el amor, las dudas y el deseo; pero Ailín nunca nos hablará de esa otra ciudad que amenaza con retenerla. Abolidos los contextos y las ciudades, queda un diálogo entre dos amantes, un diálogo que Ailín sostiene con destreza, empleando distintas formas métricas como el soneto, la décima y el romance, entrelazados con haikus, inventarios, telegramas, y preguntas que no esperan respuesta, porque acaso suponen el reencuentro".
-                </p>
-                <p className="font-medium mt-6 text-md text-[var(--text-brown)]">Daniel Zayas</p>
               </a>
 
               {/* Poem Carousel */}
@@ -186,6 +182,55 @@ tu propia constelación.`,
                   </button>
                 </div>
               </div>
+            </div>
+          </motion.div>
+
+          {/* ── Reseña ── */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-16 sm:mb-24"
+          >
+            <div className="flex items-center gap-3 mb-8">
+              <Book className="w-6 h-6 text-[var(--primary-turquoise)]" />
+              <h2 className="text-2xl sm:text-3xl font-bold text-[var(--text-brown)]">Reseña</h2>
+            </div>
+
+            <div className="bg-[var(--accent-white)]/60 backdrop-blur-sm rounded-2xl p-6 sm:p-10 border-2 border-[var(--primary-turquoise)]/20 shadow-lg">
+              <p className="text-[var(--text-brown-light)] leading-relaxed text-sm sm:text-base mb-4 text-justify">
+                <em>Nunca sabré si digo adiós, o pido que me salven.</em> Con ese verso del poeta Nelson Simón, se nos presenta este <strong>Breve manual para esperar(te)</strong>. Ailin González, su autora, nos instala en medio de una despedida, un viaje, dos amantes y una revisión pequeña y esencial de sus emociones. En este libro el lector podrá posicionarse desde la mirada de quien se queda, atado a la ciudad, a su circunstancia, reinventando una isla que se vuelve jaula. El que se queda elabora inventarios, envía telegramas, exige y advierte:
+              </p>
+
+              <blockquote className="pl-4 sm:pl-6 my-6 mx-auto max-w-md text-center font-serif text-[var(--text-brown)] leading-loose whitespace-pre-line text-sm sm:text-base italic">
+{`…no sobreviven las presas.
+Teje tú la telaraña,
+conviértete en la montaña
+inalcanzable al mortal,
+cae siempre vertical,
+para defenderte… engaña.`}
+              </blockquote>
+
+              <p className="text-[var(--text-brown-light)] leading-relaxed text-sm sm:text-base mb-4 text-justify">
+                En la segunda parte del libro el lector podrá deshacer la maleta, sentir la extrañeza de quien se marcha y girar entre sweaters, catedrales, ruinas y bolsos extraños. Ailín nos propone estos apuntes de un viaje empleando estructuras rimadas como el romance, la décima y el soneto. Sin embargo, cuando la métrica y la rima son demasiada carga para poder expresar desde el dolor, acude al epigrama, el haiku, o la frase suelta.
+              </p>
+
+              <blockquote className="pl-4 sm:pl-6 my-6 mx-auto max-w-md text-center font-serif text-[var(--text-brown)] leading-loose whitespace-pre-line text-sm sm:text-base italic">
+{`Vuela el pelícano
+barcos sueltan amarras
+otra ciudad
+en las noches me salva
+tu voz en el teléfono.`}
+              </blockquote>
+
+              <p className="text-[var(--text-brown-light)] leading-relaxed text-sm sm:text-base text-justify">
+                Ailín es autora de los libros de cuentos: <em>Como mienten los boleros</em> (Ed. Áncoras, 2014); y <em>Otra canción para Magda</em> (Ed. Ávila, 2015). También publicó el libro infantil: <em>Un regalo diferente</em> (Ed. La Luz, 2018). Después de reinventarse y mutar hacia el diseño gráfico, la programación de software, la composición musical y el Stand Up Comedy, Ailín vuelve a la escritura, para contarnos una historia de amor desde la sencillez, sin alardes. En este libro de poesía de amor, hermosamente diseñado, se nos representa al olvido como un arma cargada. Habrá que leer estás páginas para saber si retumba algún disparo, o si hay regreso.
+              </p>
+
+              <p className="font-medium mt-6 text-md text-[var(--text-brown)] text-right">
+                — Daniel Zayas
+              </p>
             </div>
           </motion.div>
 

@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Moon, Sun } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import perfilImg from '@/assets/fotos/perfil.jpg';
+import perfilImg from '@/assets/fotos/perfil.webp';
 
 function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -26,7 +26,7 @@ function Header() {
   }, [darkMode]);
 
   const navLinks = [
-    { name: 'Literatura', path: '/cuentos' },
+    { name: 'Literatura', path: '/literatura' },
     { name: 'Comedia', path: '/comedia' },
     { name: 'Música', path: '/musica' },
     { name: 'Galería', path: '/galeria' },

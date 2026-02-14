@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { BookOpen, Music, Laugh, Camera, Calendar, Ticket } from 'lucide-react';
 import { motion } from 'framer-motion';
-import photo from '@/assets/fotos/ailin poster.jpg';
+import photo from '@/assets/fotos/ailin poster.webp';
 
 function HomePage() {
   const upcomingShows = [
@@ -31,7 +31,7 @@ function HomePage() {
   ];
 
   const ctaButtons = [
-    { icon: BookOpen, label: 'Leer', subtitle: 'Poemas & Cuentos', path: '/cuentos' },
+    { icon: BookOpen, label: 'Leer', subtitle: 'Poemas & Cuentos', path: '/literatura' },
     { icon: Music, label: 'Escuchar', subtitle: 'Música', path: '/musica' },
     { icon: Laugh, label: 'Reír', subtitle: 'Comedia', path: '/comedia' },
     { icon: Camera, label: 'Ver', subtitle: 'Galería', path: '/galeria' },
