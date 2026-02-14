@@ -170,6 +170,7 @@ function HomePage() {
                       src={show.poster}
                       alt={`Poster ${show.title}`}
                       className="w-full h-full object-cover"
+                      loading="lazy"
                     />
                   </div>
                 )}

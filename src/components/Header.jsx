@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Moon, Sun } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import perfilImg from '@/assets/fotos/perfil.webp';
+import perfilImg from '@/assets/fotos/perfil-thumb.webp';
 
 function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -44,14 +44,14 @@ function Header() {
             <img
               src={perfilImg}
               alt="Ailin González"
-              className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 rounded-full object-cover border-2 border-white/70 shadow-sm"
+              className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 rounded-full object-cover border-2 border-[#0a3d38]/30 shadow-sm"
             />
-            <span className="text-xl sm:text-2xl md:text-3xl font-bold text-white transition-opacity hover:opacity-90 leading-none">
+            <span className="text-xl sm:text-2xl md:text-3xl font-bold text-[#0a3d38] transition-opacity hover:opacity-90 leading-none">
               Ailin González
             </span>
           </Link>
 
-          <p className="text-[10px] sm:text-xs md:text-base italic text-white/80 leading-tight max-w-[130px] sm:max-w-none">
+          <p className="text-[10px] sm:text-xs md:text-base italic text-[#0a3d38]/80 leading-tight max-w-[130px] sm:max-w-none">
             Escritora · Comediante · Creadora
           </p>
           {/* Desktop Navigation */}
@@ -63,7 +63,7 @@ function Header() {
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                   isActive(link.path)
                     ? 'bg-white/90 text-[var(--primary-turquoise)] shadow-md'
-                    : 'text-white hover:bg-white/20'
+                    : 'text-[#0a3d38] hover:bg-white/20'
                 }`}
               >
                 {link.name}
@@ -71,7 +71,7 @@ function Header() {
             ))}
             <button
               onClick={() => setDarkMode(!darkMode)}
-              className="ml-2 p-2 rounded-lg text-white hover:bg-white/20 transition-colors"
+              className="ml-2 p-2 rounded-lg text-[#0a3d38] hover:bg-white/20 transition-colors"
               aria-label={darkMode ? 'Modo claro' : 'Modo oscuro'}
             >
               {darkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
@@ -82,14 +82,14 @@ function Header() {
           <div className="lg:hidden flex items-center gap-1">
             <button
               onClick={() => setDarkMode(!darkMode)}
-              className="p-2 rounded-lg text-white hover:bg-white/20 transition-colors"
+              className="p-2 rounded-lg text-[#0a3d38] hover:bg-white/20 transition-colors"
               aria-label={darkMode ? 'Modo claro' : 'Modo oscuro'}
             >
               {darkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
             </button>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-lg text-white hover:bg-white/20 transition-colors"
+              className="p-2 rounded-lg text-[#0a3d38] hover:bg-white/20 transition-colors"
               aria-label="Toggle menu"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -116,7 +116,7 @@ function Header() {
                     className={`block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200 ${
                       isActive(link.path)
                         ? 'bg-white/90 text-[var(--primary-turquoise)] shadow-md mx-2'
-                        : 'text-white hover:bg-white/10 mx-2'
+                        : 'text-[#0a3d38] hover:bg-white/10 mx-2'
                     }`}
                   >
                     {link.name}
