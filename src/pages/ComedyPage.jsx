@@ -4,9 +4,10 @@ import { Helmet } from 'react-helmet';
 import { Laugh, SmilePlus, ChevronLeft, ChevronRight, Clapperboard } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useExclusiveVideo } from '@/hooks/useExclusiveVideo';
-import meme1 from '@/assets/fotos/memes/472440558_3395830140550871_198826107512849148_n.webp';
-import meme2 from '@/assets/fotos/memes/499216851_1661883167806856_6341256020799193747_n.webp';
-import meme3 from '@/assets/fotos/memes/meme 1.webp';
+import memeTherian from '@/assets/fotos/memes/therian.webp';
+import memeRegalos from '@/assets/fotos/memes/regalos.webp';
+import memeMatrimonio from '@/assets/fotos/memes/matrimonio.webp';
+import memeTemu from '@/assets/fotos/memes/temu.webp';
 
 import chisteAfeitarse from '@/assets/videos/chistes/Afeitarse.mp4';
 import chisteVarita from '@/assets/videos/chistes/Varita magica.mp4';
@@ -16,7 +17,7 @@ function ComedyPage() {
   useExclusiveVideo();
   const [currentMeme, setCurrentMeme] = useState(0);
 
-  const memes = [meme1, meme2, meme3];
+  const memes = [memeTherian, memeRegalos, memeMatrimonio, memeTemu];
 
   const chistes = [
     { src: chisteAfeitarse, title: 'Afeitarse' },
@@ -81,7 +82,7 @@ function ComedyPage() {
               </button>
 
               <div className="flex-1 min-w-0">
-                <div className="relative h-[400px] sm:h-[500px] overflow-hidden rounded-2xl shadow-lg border-2 border-[var(--primary-turquoise)]/20 bg-[var(--accent-white)]">
+                <div className="relative h-[400px] sm:h-[500px] overflow-hidden rounded-2xl shadow-lg border-2 border-[var(--primary-turquoise)]/20 bg-black">
                   <AnimatePresence mode="wait">
                     <motion.img
                       key={currentMeme}

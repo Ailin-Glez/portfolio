@@ -4,29 +4,25 @@ import { Link } from 'react-router-dom';
 import { BookOpen, Music, Laugh, Camera, Calendar, Ticket } from 'lucide-react';
 import { motion } from 'framer-motion';
 import photo from '@/assets/fotos/ailin poster.webp';
+import posterShowLC from '@/assets/eventos/show lc.webp';
+import posterMiami from '@/assets/eventos/miami es un chiste.webp';
 
 function HomePage() {
   const upcomingShows = [
     {
-      day: '13',
-      month: 'FEB',
-      title: 'Amor fuera de tono',
-      ticketUrl: 'https://www.eventbrite.com/e/amor-fuera-de-tono-tickets-1981945689911',
-      poster: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1176180356%2F163929308460%2F1%2Foriginal.20260129-173029?crop=focalpoint&fit=crop&w=480&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.456&fp-y=0.435&s=c6a524f4ed758ee5c86a33089f158914',
-    },
-    {
-      day: '19',
-      month: 'FEB',
+      day: 'Todos los jueves',
+      month: 'MARZO',
       title: 'Latinos Comedy',
-      ticketUrl: 'https://www.eventbrite.com/e/latinos-comedy-show-de-stand-up-en-espanol-tickets-1981913364224?aff=ebdssbdestsearch',
-      poster: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1176135188%2F469917114927%2F1%2Foriginal.20260129-050150?crop=focalpoint&fit=crop&w=480&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.6&fp-y=0.51&s=e974e7ad355102be00dc28ebe1dc32ea',
+      ticketUrl: 'https://www.eventbrite.com/e/latinos-comedy-show-de-stand-up-comedy-en-espanol-en-vivo-tickets-1983496627808?aff=oddtdtcreator',
+      poster: posterShowLC,
+      highlight: true,
     },
     {
-      day: '25',
-      month: 'FEB',
-      title: 'Comediantes',
-      ticketUrl: 'https://www.ticketplate.com/checkout/comediantes-una-noche-de-stand-up-2602252000',
-      poster: 'https://ticketplate-backend-prod.s3.amazonaws.com/events/25f0c215-a7c7-430d-b2a6-d907da18d4b4/images/comediantes_febrero-b.png'
+      day: '24',
+      month: 'MAYO',
+      title: 'Festival Miami es un chiste',
+      ticketUrl: 'https://esunchiste.ticketplate.com/es/latinos-comedy-2605242130',
+      poster: posterMiami,
     },
   ];
 
@@ -131,10 +127,6 @@ function HomePage() {
             transition={{ duration: 0.5 }}
             className="text-center mb-10"
           >
-            <div className="inline-flex items-center gap-2 bg-[var(--primary-turquoise)]/10 rounded-full px-4 py-2 mb-4">
-              <Calendar className="w-5 h-5 text-[var(--primary-turquoise)]" />
-              <span className="text-sm font-semibold text-[var(--primary-turquoise)] uppercase tracking-wider">Febrero 2025</span>
-            </div>
             <h2 className="text-3xl sm:text-4xl font-bold text-[var(--text-brown)]">
               Próximos Shows
             </h2>
@@ -155,12 +147,14 @@ function HomePage() {
                            flex items-center gap-4 sm:gap-6 p-4 sm:p-5"
               >
                 {/* Date Badge */}
-                <div className="flex-shrink-0 w-12 h-12 sm:w-20 sm:h-20 rounded-lg sm:rounded-xl
-                                bg-[var(--primary-turquoise)] text-white
-                                flex flex-col items-center justify-center
-                                shadow-lg shadow-[var(--primary-turquoise)]/25">
-                  <span className="text-lg sm:text-3xl font-bold leading-none">{show.day}</span>
-                  <span className="text-[10px] sm:text-sm font-medium uppercase tracking-wider opacity-90">{show.month}</span>
+                <div className={`flex-shrink-0 w-14 sm:w-24 rounded-lg sm:rounded-xl px-1 py-2 sm:py-3
+                                flex flex-col items-center justify-center gap-0.5
+                                ${show.highlight
+                                  ? 'bg-[var(--secondary-coral)] text-white shadow-lg shadow-[var(--secondary-coral)]/25'
+                                  : 'bg-[var(--primary-turquoise)] text-white shadow-lg shadow-[var(--primary-turquoise)]/25'
+                                }`}>
+                  <span className="text-[10px] sm:text-sm font-bold leading-tight text-center uppercase tracking-wide">{show.day}</span>
+                  <span className="text-[9px] sm:text-xs font-medium uppercase tracking-wider opacity-90">{show.month}</span>
                 </div>
 
                 {/* Poster */}

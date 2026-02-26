@@ -19,6 +19,11 @@ import dsc5070 from '@/assets/fotos/gallery/DSC_5070-32.webp';
 import dsc5113 from '@/assets/fotos/gallery/DSC_5113-34.webp';
 import jpg18 from '@/assets/fotos/gallery/JPG-18.webp';
 import jpg5 from '@/assets/fotos/gallery/JPG-5 (1).webp';
+import dsc03232 from '@/assets/fotos/gallery/DSC03232.webp';
+import dsc03489 from '@/assets/fotos/gallery/DSC03489.webp';
+import jpg317 from '@/assets/fotos/gallery/JPG-317.webp';
+import jpg736 from '@/assets/fotos/gallery/JPG-736.webp';
+import jpg914 from '@/assets/fotos/gallery/JPG-914.webp';
 
 function GalleryPage() {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -39,6 +44,11 @@ function GalleryPage() {
     { url: dsc5113, title: 'Sesión fotográfica' },
     { url: jpg18, title: 'Mini maquillaje' },
     { url: jpg5, title: 'Asustada por salir' },
+    { url: dsc03232, title: 'Inocente' },
+    { url: dsc03489, title: 'Jugando con fuego' },
+    { url: jpg317, title: 'Sacando cuentas' },
+    { url: jpg736, title: 'Presentando mi libro' },
+    { url: jpg914, title: 'Tomando medidas' },
   ];
 
   return (
@@ -64,7 +74,7 @@ function GalleryPage() {
               Galería
             </h1>
             <p className="text-xl text-[var(--text-brown-light)] max-w-2xl mx-auto leading-relaxed">
-              Momentos capturados en shows y presentaciones, historias visuales, instantes que merecen ser recordados
+              Momentos capturados en shows y presentaciones
             </p>
           </motion.div>
 

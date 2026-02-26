@@ -15,6 +15,7 @@ import cancionMetrico from '@/assets/videos/canciones/Sistema métrico cubano.mp
 import cancionMiedo from '@/assets/videos/canciones/Miedo viajar en avion.mp4';
 import cancionChataing from '@/assets/videos/canciones/Chataing.mp4';
 import cancionAlcohol from '@/assets/videos/canciones/Alcohol.mp4';
+import cancionVirgen from '@/assets/videos/canciones/Maria.mp4';
 // Venezuela
 import vzlaNoEsLoMismo from '@/assets/videos/venezuela/No es lo mismo.mp4';
 import vzlaAprendiendo from '@/assets/videos/venezuela/Aprendiendo.mp4';
@@ -31,19 +32,20 @@ function MusicPage() {
   ];
 
   const canciones = [
-    { src: cancionAlcohol, title: 'Alcohol' },
     { src: cancionAmerican, title: 'American Dream' },
-    { src: cancionChataing, title: 'Chataing' },
-    { src: cancionComunista, title: 'Comunista' },
+    { src: cancionComunista, title: 'Canción incómoda' },
+    { src: cancionAlcohol, title: 'Décima' },
     { src: cancionMiami, title: 'Miami es un chiste' },
     { src: cancionMiedo, title: 'Miedo a viajar en avión' },
+    { src: cancionChataing, title: 'Presentando a Luis Chataing' },
     { src: cancionMetrico, title: 'Sistema métrico cubano' },
+    { src: cancionVirgen, title: 'Virgen todavía' },
   ];
 
   const venezuela = [
-    { src: vzlaArrecho, title: 'Arrecho' },
-    { src: vzlaAprendiendo, title: 'Aprendiendo' },
+    { src: vzlaAprendiendo, title: 'Palabras venezolanas' },
     { src: vzlaVenezuela, title: 'Venezuela' },
+    { src: vzlaArrecho, title: 'Arrecho' },
     { src: vzlaNoEsLoMismo, title: 'No es lo mismo' },
   ];
 
