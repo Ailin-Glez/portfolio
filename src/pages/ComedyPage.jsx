@@ -35,7 +35,17 @@ function ComedyPage() {
     <>
       <Helmet>
         <title>Comedia - Ailin González</title>
-        <meta name="description" content="El lado cómico de Ailin González: stand-up, humor y risas garantizadas." />
+        <meta name="description" content="El lado cómico de Ailin González: stand-up, humor" />
+        <link rel="canonical" href="https://ailingonzalez.com/comedia" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ailingonzalez.com/comedia" />
+        <meta property="og:title" content="Comedia - Ailin González" />
+        <meta property="og:description" content="El lado cómico de Ailin González: stand-up, humor" />
+        <meta property="og:image" content="https://ailingonzalez.com/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Comedia - Ailin González" />
+        <meta name="twitter:description" content="El lado cómico de Ailin González: stand-up, humor" />
+        <meta name="twitter:image" content="https://ailingonzalez.com/og-image.jpg" />
       </Helmet>
 
       <div className="min-h-screen py-8 sm:py-12">

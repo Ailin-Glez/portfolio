@@ -54,10 +54,17 @@ function MusicPage() {
     <>
       <Helmet>
         <title>Música - Ailin González</title>
-        <meta
-          name="description"
-          content="Explora la música de Ailin González: ukelele, spoken word y melodías que tocan el alma."
-        />
+        <meta name="description" content="Explora la música de Ailin González: ukelele, spoken word y melodías" />
+        <link rel="canonical" href="https://ailingonzalez.com/musica" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ailingonzalez.com/musica" />
+        <meta property="og:title" content="Música - Ailin González" />
+        <meta property="og:description" content="Explora la música de Ailin González: ukelele, spoken word y melodías" />
+        <meta property="og:image" content="https://ailingonzalez.com/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Música - Ailin González" />
+        <meta name="twitter:description" content="Explora la música de Ailin González: ukelele, spoken word y melodías" />
+        <meta name="twitter:image" content="https://ailingonzalez.com/og-image.jpg" />
       </Helmet>
 
       <div className="min-h-screen py-8 sm:py-12">

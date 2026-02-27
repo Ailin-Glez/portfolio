@@ -56,6 +56,16 @@ function GalleryPage() {
       <Helmet>
         <title>Galería - Ailin González</title>
         <meta name="description" content="Galería fotográfica de Ailin González: momentos artísticos, performances y vida creativa." />
+        <link rel="canonical" href="https://ailingonzalez.com/galeria" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ailingonzalez.com/galeria" />
+        <meta property="og:title" content="Galería - Ailin González" />
+        <meta property="og:description" content="Galería fotográfica de Ailin González: momentos artísticos, performances y vida creativa." />
+        <meta property="og:image" content="https://ailingonzalez.com/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Galería - Ailin González" />
+        <meta name="twitter:description" content="Galería fotográfica de Ailin González: momentos artísticos, performances y vida creativa." />
+        <meta name="twitter:image" content="https://ailingonzalez.com/og-image.jpg" />
       </Helmet>
 
       <div className="min-h-screen py-12">

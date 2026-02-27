@@ -55,10 +55,37 @@ tu propia constelación.`,
     <>
       <Helmet>
         <title>Literatura - Ailin González</title>
-        <meta
-          name="description"
-          content="Poemas y cuentos de Ailin González. Descubre su libro 'Breve manual para esperar(te)' y sus textos donde la narrativa se encuentra con la emoción."
-        />
+        <meta name="description" content="Poemas y cuentos de Ailin González. Descubre su libro 'Breve manual para esperar(te)'" />
+        <link rel="canonical" href="https://ailingonzalez.com/literatura" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ailingonzalez.com/literatura" />
+        <meta property="og:title" content="Literatura - Ailin González" />
+        <meta property="og:description" content="Poemas y cuentos de Ailin González. Descubre su libro 'Breve manual para esperar(te)'" />
+        <meta property="og:image" content="https://ailingonzalez.com/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Literatura - Ailin González" />
+        <meta name="twitter:description" content="Poemas y cuentos de Ailin González. Descubre su libro 'Breve manual para esperar(te)'" />
+        <meta name="twitter:image" content="https://ailingonzalez.com/og-image.jpg" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Book",
+          "name": "Breve manual para esperar(te)",
+          "author": {
+            "@type": "Person",
+            "name": "Ailin González",
+            "url": "https://ailingonzalez.com"
+          },
+          "url": "https://www.amazon.com/dp/B0GL9MXGF3",
+          "inLanguage": "es",
+          "genre": "Poesía",
+          "description": "Un libro de poesía de amor que instala al lector en medio de una despedida, un viaje, dos amantes y una revisión pequeña y esencial de las emociones.",
+          "image": "https://ailingonzalez.com/og-image.jpg",
+          "offers": {
+            "@type": "Offer",
+            "url": "https://www.amazon.com/dp/B0GL9MXGF3",
+            "availability": "https://schema.org/InStock"
+          }
+        })}</script>
       </Helmet>
 
       <div className="min-h-screen py-8 sm:py-12">

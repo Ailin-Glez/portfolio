@@ -39,6 +39,16 @@ function AboutPage() {
       <Helmet>
         <title>Sobre Mí - Ailin González</title>
         <meta name="description" content="Conoce a Ailin González: comediante, escritora, poeta y creadora de contenido. Ponte en contacto para shows, colaboraciones o simplemente para decir hola." />
+        <link rel="canonical" href="https://ailingonzalez.com/sobre-mi" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ailingonzalez.com/sobre-mi" />
+        <meta property="og:title" content="Sobre Mí - Ailin González" />
+        <meta property="og:description" content="Conoce a Ailin González: comediante, escritora, poeta y creadora de contenido. Ponte en contacto para shows, colaboraciones o simplemente para decir hola." />
+        <meta property="og:image" content="https://ailingonzalez.com/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Sobre Mí - Ailin González" />
+        <meta name="twitter:description" content="Conoce a Ailin González: comediante, escritora, poeta y creadora de contenido. Ponte en contacto para shows, colaboraciones o simplemente para decir hola." />
+        <meta name="twitter:image" content="https://ailingonzalez.com/og-image.jpg" />
       </Helmet>
 
       {/* ── Sobre Mí ── */}

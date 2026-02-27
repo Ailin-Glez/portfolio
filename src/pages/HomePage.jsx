@@ -37,10 +37,76 @@ function HomePage() {
     <>
       <Helmet>
         <title>Ailin González</title>
-        <meta
-          name="description"
-          content="Bienvenido al mundo de Ailin González: donde la poesía se encuentra con la comedia, el ukelele con las palabras, y la risa con la reflexión."
-        />
+        <meta name="description" content="Bienvenido al mundo de Ailin González: donde la poesía se encuentra con la comedia, el ukelele con las palabras" />
+        <link rel="canonical" href="https://ailingonzalez.com/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ailingonzalez.com/" />
+        <meta property="og:title" content="Ailin González" />
+        <meta property="og:description" content="Bienvenido al mundo de Ailin González: donde la poesía se encuentra con la comedia, el ukelele con las palabras" />
+        <meta property="og:image" content="https://ailingonzalez.com/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Ailin González" />
+        <meta name="twitter:description" content="Bienvenido al mundo de Ailin González: donde la poesía se encuentra con la comedia, el ukelele con las palabras" />
+        <meta name="twitter:image" content="https://ailingonzalez.com/og-image.jpg" />
+        <script type="application/ld+json">{JSON.stringify([
+          {
+            "@context": "https://schema.org",
+            "@type": "Event",
+            "name": "Latinos Comedy",
+            "description": "Show de Stand Up Comedy en español en vivo con Latinos Comedy, todos los jueves de marzo en Real Café.",
+            "startDate": "2026-03-05",
+            "endDate": "2026-03-26",
+            "eventStatus": "https://schema.org/EventScheduled",
+            "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+            "location": {
+              "@type": "Place",
+              "name": "Real Café",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "9600 SW 8th St",
+                "addressLocality": "Miami",
+                "addressRegion": "FL",
+                "postalCode": "33174",
+                "addressCountry": "US"
+              }
+            },
+            "performer": { "@type": "Person", "name": "Ailin González", "url": "https://ailingonzalez.com" },
+            "organizer": { "@type": "Organization", "name": "Latinos Comedy", "url": "https://latinoscomedy.com/" },
+            "offers": {
+              "@type": "Offer",
+              "url": "https://www.eventbrite.com/e/latinos-comedy-show-de-stand-up-comedy-en-espanol-en-vivo-tickets-1983496627808",
+              "availability": "https://schema.org/InStock"
+            }
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "Event",
+            "name": "Festival Miami es un chiste",
+            "description": "Show de Stand Up Comedy en español con Latinos Comedy, parte del Festival Miami es un chiste.",
+            "startDate": "2026-05-24",
+            "eventStatus": "https://schema.org/EventScheduled",
+            "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+            "location": {
+              "@type": "Place",
+              "name": "Miami Improv Comedy Club",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "3450 NW 83rd Ave",
+                "addressLocality": "Doral",
+                "addressRegion": "FL",
+                "postalCode": "33122",
+                "addressCountry": "US"
+              }
+            },
+            "performer": { "@type": "Person", "name": "Ailin González", "url": "https://ailingonzalez.com" },
+            "organizer": { "@type": "Organization", "name": "Miami es un chiste", "url": "https://miamiesunchiste.com/" },
+            "offers": {
+              "@type": "Offer",
+              "url": "https://esunchiste.ticketplate.com/es/latinos-comedy-2605242130",
+              "availability": "https://schema.org/InStock"
+            }
+          }
+        ])}</script>
       </Helmet>
 
       {/* Hero Section */}
