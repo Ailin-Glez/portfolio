@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import photo from '@/assets/fotos/ailin poster.webp';
 import posterShowLC from '@/assets/eventos/show lc.webp';
 import posterMiami from '@/assets/eventos/miami es un chiste.webp';
+import YouTubeSection from '@/components/YouTubeSection';
 
 function HomePage() {
   const upcomingShows = [
@@ -184,7 +185,7 @@ function HomePage() {
       </div>
 
       {/* Shows del Mes */}
-      <section className="bg-[var(--bg-cream)] py-16 md:py-24">
+      <section className="bg-[var(--bg-cream)] py-10 md:py-14">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -263,6 +264,8 @@ function HomePage() {
           </div>
         </div>
       </section>
+
+      <YouTubeSection />
     </>
   );
 }
