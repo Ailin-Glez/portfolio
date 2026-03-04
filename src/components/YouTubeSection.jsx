@@ -26,32 +26,34 @@ function VideoCard({ video, index }) {
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.4, delay: index * 0.05 }}
-      className="group relative overflow-hidden rounded-2xl shadow-md
+      className="group block rounded-2xl shadow-md
                  border border-[var(--secondary-coral)]/20
                  hover:shadow-xl hover:border-[var(--secondary-coral)]/50
                  transition-all duration-300 hover:scale-[1.02]
                  will-change-transform"
     >
-      {/* Thumbnail */}
-      <div className={video.isShort ? 'aspect-[9/16] bg-black' : 'aspect-video bg-black'}>
-        <img
-          src={video.thumbnail}
-          alt={video.title}
-          className="w-full h-full object-cover group-hover:opacity-85 transition-opacity duration-300"
-          loading="lazy"
-        />
-      </div>
+      {/* overflow-hidden separado del border para evitar artefacto en esquinas */}
+      <div className="relative overflow-hidden rounded-2xl">
+        <div className={video.isShort ? 'aspect-[9/16] bg-black' : 'aspect-video bg-black'}>
+          <img
+            src={video.thumbnail}
+            alt={video.title}
+            className="w-full h-full object-cover group-hover:opacity-85 transition-opacity duration-300"
+            loading="lazy"
+          />
+        </div>
 
-      {/* Overlay on hover */}
-      <div className="absolute inset-0 flex items-end p-3">
-  <span
-    className="inline-flex items-center gap-1.5 bg-[#FF0000] text-white text-[10px] font-bold px-2 py-1 rounded-lg
-               opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-  >
-    <ExternalLinkIcon className="w-3 h-3" />
-    Ver en YouTube
-  </span>
-</div>
+        {/* Overlay on hover */}
+        <div className="absolute inset-0 flex items-end p-3">
+          <span
+            className="inline-flex items-center gap-1.5 bg-[#FF0000] text-white text-[10px] font-bold px-2 py-1 rounded-lg
+                       opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          >
+            <ExternalLinkIcon className="w-3 h-3" />
+            Ver en YouTube
+          </span>
+        </div>
+      </div>
     </motion.a>
   );
 }
