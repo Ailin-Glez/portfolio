@@ -4,6 +4,16 @@ const API_KEY = import.meta.env.VITE_YOUTUBE_API_KEY;
 const CHANNEL_HANDLE = 'laquetocaelukelele';
 const BASE = 'https://www.googleapis.com/youtube/v3';
 
+function parseDuration(duration) {
+  if (!duration) return 0;
+  const match = duration.match(/PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?/);
+  if (!match) return 0;
+  const hours = parseInt(match[1] || 0);
+  const minutes = parseInt(match[2] || 0);
+  const seconds = parseInt(match[3] || 0);
+  return hours * 3600 + minutes * 60 + seconds;
+}
+
 export function useYouTubeVideos(maxResults = 6) {
   const [videos, setVideos] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -27,13 +37,35 @@ export function useYouTubeVideos(maxResults = 6) {
           `${BASE}/playlistItems?part=snippet&playlistId=${uploadsPlaylistId}&maxResults=${maxResults}&key=${API_KEY}`
         );
         const videosData = await videosRes.json();
+        const rawItems = videosData.items ?? [];
 
-        const items = videosData.items?.map((item) => ({
-          id: item.snippet.resourceId.videoId,
-          title: item.snippet.title,
-          thumbnail: item.snippet.thumbnails?.high?.url || item.snippet.thumbnails?.default?.url,
-          publishedAt: item.snippet.publishedAt,
-        })) ?? [];
+        // 3. Fetch video details to get duration (to detect Shorts ≤ 60s)
+        const videoIds = rawItems.map((item) => item.snippet.resourceId.videoId).join(',');
+        const detailsRes = await fetch(
+          `${BASE}/videos?part=contentDetails&id=${videoIds}&key=${API_KEY}`
+        );
+        const detailsData = await detailsRes.json();
+
+        const durationMap = {};
+        detailsData.items?.forEach((item) => {
+          durationMap[item.id] = parseDuration(item.contentDetails.duration);
+        });
+
+        const items = rawItems.map((item) => {
+          const videoId = item.snippet.resourceId.videoId;
+          const duration = durationMap[videoId] ?? 0;
+          return {
+            id: videoId,
+            title: item.snippet.title,
+            thumbnail:
+              item.snippet.thumbnails?.maxres?.url ||
+              item.snippet.thumbnails?.standard?.url ||
+              item.snippet.thumbnails?.high?.url ||
+              item.snippet.thumbnails?.default?.url,
+            publishedAt: item.snippet.publishedAt,
+            isShort: duration > 0 && duration <= 180,
+          };
+        });
 
         setVideos(items);
       } catch (err) {
