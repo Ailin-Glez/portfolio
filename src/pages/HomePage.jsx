@@ -14,7 +14,7 @@ function HomePage() {
       day: 'Todos los jueves',
       month: 'MARZO',
       title: 'Latinos Comedy',
-      ticketUrl: 'https://www.eventbrite.com/e/latinos-comedy-show-de-stand-up-comedy-en-espanol-en-vivo-tickets-1983496627808?aff=oddtdtcreator',
+      ticketUrl: 'https://www.eventbrite.com/e/latinos-comedy-show-de-stand-up-comedy-en-espanol-en-vivo-tickets-1985115243130?aff=oddtdtcreator',
       poster: posterShowLC,
       highlight: true,
     },
