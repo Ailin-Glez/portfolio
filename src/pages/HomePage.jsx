@@ -11,14 +11,6 @@ import YouTubeSection from '@/components/YouTubeSection';
 function HomePage() {
   const upcomingShows = [
     {
-      day: 'Todos los jueves',
-      month: 'MARZO',
-      title: 'Latinos Comedy',
-      ticketUrl: 'https://www.eventbrite.com/e/latinos-comedy-show-de-stand-up-comedy-en-espanol-en-vivo-tickets-1985115243130?aff=oddtdtcreator',
-      poster: posterShowLC,
-      highlight: true,
-    },
-    {
       day: '24',
       month: 'MAYO',
       title: 'Festival Miami es un chiste',
