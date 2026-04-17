@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 import { Laugh, SmilePlus, ChevronLeft, ChevronRight, Clapperboard } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useExclusiveVideo } from '@/hooks/useExclusiveVideo';
+import memeArtemis from '@/assets/fotos/memes/artemis2.webp';
 import memeSobreproteccion from '@/assets/fotos/memes/sobreproteccion.webp';
 import memeTherian from '@/assets/fotos/memes/therian.webp';
 import memeRegalos from '@/assets/fotos/memes/regalos.webp';
@@ -18,7 +19,7 @@ function ComedyPage() {
   useExclusiveVideo();
   const [currentMeme, setCurrentMeme] = useState(0);
 
-  const memes = [memeSobreproteccion, memeTherian, memeRegalos, memeMatrimonio, memeTemu];
+  const memes = [memeArtemis, memeSobreproteccion, memeTherian, memeRegalos, memeMatrimonio, memeTemu];
 
   const chistes = [
     { src: chisteAfeitarse, title: 'Afeitarse' },
@@ -85,8 +86,8 @@ function ComedyPage() {
             <div className="relative max-w-lg mx-auto flex items-center gap-2 sm:gap-4">
               <button
                 onClick={prevMeme}
-                className="flex-shrink-0 p-2 rounded-full bg-[var(--primary-turquoise)]/10 hover:bg-[var(--primary-turquoise)]/20
-                           text-[var(--primary-turquoise)] transition-colors"
+                className="flex-shrink-0 p-2 rounded-full bg-[#2DD4C6]/20 hover:bg-[#2DD4C6]/40
+                           text-[#2DD4C6] transition-colors"
                 aria-label="Meme anterior"
               >
                 <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
@@ -114,10 +115,10 @@ function ComedyPage() {
                     <button
                       key={i}
                       onClick={() => setCurrentMeme(i)}
-                      className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+                      className={`w-2.5 h-2.5 rounded-full transition-all duration-300 bg-[#2DD4C6] ${
                         i === currentMeme
-                          ? 'bg-[var(--primary-turquoise)] scale-125'
-                          : 'bg-[var(--primary-turquoise)]/25 hover:bg-[var(--primary-turquoise)]/50'
+                          ? 'opacity-100 scale-125'
+                          : 'opacity-30 hover:opacity-60'
                       }`}
                       aria-label={`Ir al meme ${i + 1}`}
                     />
@@ -127,8 +128,8 @@ function ComedyPage() {
 
               <button
                 onClick={nextMeme}
-                className="flex-shrink-0 p-2 rounded-full bg-[var(--primary-turquoise)]/10 hover:bg-[var(--primary-turquoise)]/20
-                           text-[var(--primary-turquoise)] transition-colors"
+                className="flex-shrink-0 p-2 rounded-full bg-[#2DD4C6]/20 hover:bg-[#2DD4C6]/40
+                           text-[#2DD4C6] transition-colors"
                 aria-label="Siguiente meme"
               >
                 <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
