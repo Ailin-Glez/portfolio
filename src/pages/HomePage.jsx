@@ -6,16 +6,17 @@ import { motion } from 'framer-motion';
 import photo from '@/assets/fotos/ailin poster.webp';
 import posterShowLC from '@/assets/eventos/show lc.webp';
 import posterMiami from '@/assets/eventos/miami es un chiste.webp';
+import posterDesconectados from '@/assets/eventos/Desconectados.webp';
 import YouTubeSection from '@/components/YouTubeSection';
 
 function HomePage() {
   const upcomingShows = [
     {
-      day: '24',
-      month: 'MAYO',
-      title: 'Festival Miami es un chiste',
-      ticketUrl: 'https://esunchiste.ticketplate.com/es/latinos-comedy-2605242130',
-      poster: posterMiami,
+      day: '18',
+      month: 'JUNIO',
+      title: 'Des-conectados',
+      ticketUrl: 'https://www.eventbrite.com/e/des-conectados-tickets-1990796103737?aff=oddtdtcreator',
+      poster: posterDesconectados,
     },
   ];
 
