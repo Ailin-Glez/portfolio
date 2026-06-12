@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 import { Laugh, SmilePlus, ChevronLeft, ChevronRight, Clapperboard } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useExclusiveVideo } from '@/hooks/useExclusiveVideo';
+import memeShakira from '@/assets/fotos/memes/shakira.webp';
 import memeArtemis from '@/assets/fotos/memes/artemis2.webp';
 import memeSobreproteccion from '@/assets/fotos/memes/sobreproteccion.webp';
 import memeTherian from '@/assets/fotos/memes/therian.webp';
@@ -19,7 +20,7 @@ function ComedyPage() {
   useExclusiveVideo();
   const [currentMeme, setCurrentMeme] = useState(0);
 
-  const memes = [memeArtemis, memeSobreproteccion, memeTherian, memeRegalos, memeMatrimonio, memeTemu];
+  const memes = [memeShakira, memeArtemis, memeSobreproteccion, memeTherian, memeRegalos, memeMatrimonio, memeTemu];
 
   const chistes = [
     { src: chisteAfeitarse, title: 'Afeitarse' },
