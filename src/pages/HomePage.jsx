@@ -12,10 +12,10 @@ import YouTubeSection from '@/components/YouTubeSection';
 function HomePage() {
   const upcomingShows = [
     {
-      day: '18',
-      month: 'JUNIO',
+      day: '23',
+      month: 'JULIO',
       title: 'Des-conectados',
-      ticketUrl: 'https://www.eventbrite.com/e/des-conectados-tickets-1990796103737?aff=oddtdtcreator',
+      ticketUrl: 'https://www.eventbrite.com/e/des-conectados-tickets-1993617872724?aff=oddtdtcreator',
       poster: posterDesconectados,
     },
   ];
@@ -46,10 +46,10 @@ function HomePage() {
           {
             "@context": "https://schema.org",
             "@type": "Event",
-            "name": "Latinos Comedy",
-            "description": "Show de Stand Up Comedy en español en vivo con Latinos Comedy, todos los jueves de marzo en Real Café.",
-            "startDate": "2026-03-05",
-            "endDate": "2026-03-26",
+            "name": "Des-conectados",
+            "description": "Show de comedia que mezcla stand-up, canciones originales, parodias e improvisación con el público, con Ailin González (ukelele) y Pato Acosta (guitarra).",
+            "startDate": "2026-07-23T20:30:00-04:00",
+            "endDate": "2026-07-23T21:30:00-04:00",
             "eventStatus": "https://schema.org/EventScheduled",
             "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
             "location": {
@@ -57,7 +57,7 @@ function HomePage() {
               "name": "Real Café",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "9600 SW 8th St",
+                "streetAddress": "9600 SW 8th St #11",
                 "addressLocality": "Miami",
                 "addressRegion": "FL",
                 "postalCode": "33174",
@@ -65,38 +65,10 @@ function HomePage() {
               }
             },
             "performer": { "@type": "Person", "name": "Ailin González", "url": "https://ailingonzalez.com" },
-            "organizer": { "@type": "Organization", "name": "Latinos Comedy", "url": "https://latinoscomedy.com/" },
+            "organizer": { "@type": "Organization", "name": "Latinos Comedy INC", "url": "https://latinoscomedy.com/" },
             "offers": {
               "@type": "Offer",
-              "url": "https://www.eventbrite.com/e/latinos-comedy-show-de-stand-up-comedy-en-espanol-en-vivo-tickets-1983496627808",
-              "availability": "https://schema.org/InStock"
-            }
-          },
-          {
-            "@context": "https://schema.org",
-            "@type": "Event",
-            "name": "Festival Miami es un chiste",
-            "description": "Show de Stand Up Comedy en español con Latinos Comedy, parte del Festival Miami es un chiste.",
-            "startDate": "2026-05-24",
-            "eventStatus": "https://schema.org/EventScheduled",
-            "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-            "location": {
-              "@type": "Place",
-              "name": "Miami Improv Comedy Club",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "3450 NW 83rd Ave",
-                "addressLocality": "Doral",
-                "addressRegion": "FL",
-                "postalCode": "33122",
-                "addressCountry": "US"
-              }
-            },
-            "performer": { "@type": "Person", "name": "Ailin González", "url": "https://ailingonzalez.com" },
-            "organizer": { "@type": "Organization", "name": "Miami es un chiste", "url": "https://miamiesunchiste.com/" },
-            "offers": {
-              "@type": "Offer",
-              "url": "https://esunchiste.ticketplate.com/es/latinos-comedy-2605242130",
+              "url": "https://www.eventbrite.com/e/des-conectados-tickets-1993617872724",
               "availability": "https://schema.org/InStock"
             }
           }
