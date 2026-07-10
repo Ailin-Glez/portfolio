@@ -1,6 +1,6 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
-import { Music, Music as Guitar, ExternalLink, CalendarHeart } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Music, ExternalLink, CalendarHeart } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useExclusiveVideo } from '@/hooks/useExclusiveVideo';
 
@@ -20,6 +20,7 @@ import cancionVirgen from '@/assets/videos/canciones/Maria.mp4';
 import vzlaNoEsLoMismo from '@/assets/videos/venezuela/No es lo mismo.mp4';
 import vzlaAprendiendo from '@/assets/videos/venezuela/Aprendiendo.mp4';
 import vzlaArrecho from '@/assets/videos/venezuela/Arrecho.mp4';
+import vzlaLaVaina from '@/assets/videos/venezuela/La vaina.mp4';
 import vzlaVenezuela from '@/assets/videos/venezuela/Venezuela.mp4';
 
 function MusicPage() {
@@ -46,6 +47,7 @@ function MusicPage() {
     { src: vzlaAprendiendo, title: 'Palabras venezolanas' },
     { src: vzlaVenezuela, title: 'Venezuela' },
     { src: vzlaArrecho, title: 'Arrecho' },
+    { src: vzlaLaVaina, title: 'La vaina' },
     { src: vzlaNoEsLoMismo, title: 'No es lo mismo' },
   ];
 
@@ -61,6 +63,7 @@ function MusicPage() {
         <meta property="og:title" content="Música - Ailin González" />
         <meta property="og:description" content="Explora la música de Ailin González: ukelele, spoken word y melodías" />
         <meta property="og:image" content="https://ailingonzalez.com/og-image.jpg" />
+        <meta property="og:image:alt" content="Foto de Ailin González" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Música - Ailin González" />
         <meta name="twitter:description" content="Explora la música de Ailin González: ukelele, spoken word y melodías" />
@@ -77,7 +80,7 @@ function MusicPage() {
             className="text-center mb-10 sm:mb-16"
           >
             <div className="mt-16 sm:mt-20 flex items-center justify-center mb-3 sm:mb-4">
-              <Guitar className="w-9 h-9 sm:w-12 sm:h-12 text-[var(--primary-turquoise)]" />
+              <Music className="w-9 h-9 sm:w-12 sm:h-12 text-[var(--primary-turquoise)]" />
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-[var(--text-brown)] mb-3 sm:mb-4">
@@ -189,32 +192,61 @@ function MusicPage() {
               <h2 className="text-2xl sm:text-3xl font-bold text-[var(--text-brown)]">Canciones de Venezuela</h2>
             </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
-              {venezuela.map((video, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.05 }}
-                  className="bg-[var(--accent-white)]/60 backdrop-blur-sm rounded-xl overflow-hidden
-                             border border-[var(--primary-turquoise)]/20 shadow-md
-                             hover:shadow-lg hover:border-[var(--primary-turquoise)]/40 transition-all duration-300"
-                >
-                  <video
-                    src={video.src}
-                    controls
-                    playsInline
-                    preload="metadata"
-                    className="w-full aspect-[9/16] object-cover"
-                  />
-                  <div className="p-2 sm:p-3 text-center">
-                    <p className="text-xs sm:text-sm font-semibold text-[var(--text-brown)] truncate">
-                      {video.title}
-                    </p>
-                  </div>
-                </motion.div>
-              ))}
+            <div className="space-y-3 sm:space-y-4 max-w-2xl mx-auto">
+              <div className="grid grid-cols-3 gap-3 sm:gap-4">
+                {venezuela.slice(0, 3).map((video, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: index * 0.05 }}
+                    className="bg-[var(--accent-white)]/60 backdrop-blur-sm rounded-xl overflow-hidden
+                               border border-[var(--primary-turquoise)]/20 shadow-md
+                               hover:shadow-lg hover:border-[var(--primary-turquoise)]/40 transition-all duration-300"
+                  >
+                    <video
+                      src={video.src}
+                      controls
+                      playsInline
+                      preload="metadata"
+                      className="w-full aspect-[9/16] object-cover"
+                    />
+                    <div className="p-2 sm:p-3 text-center">
+                      <p className="text-xs sm:text-sm font-semibold text-[var(--text-brown)] truncate">
+                        {video.title}
+                      </p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+              <div className="grid grid-cols-2 gap-3 sm:gap-4 max-w-[66%] mx-auto">
+                {venezuela.slice(3).map((video, index) => (
+                  <motion.div
+                    key={index + 3}
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: (index + 3) * 0.05 }}
+                    className="bg-[var(--accent-white)]/60 backdrop-blur-sm rounded-xl overflow-hidden
+                               border border-[var(--primary-turquoise)]/20 shadow-md
+                               hover:shadow-lg hover:border-[var(--primary-turquoise)]/40 transition-all duration-300"
+                  >
+                    <video
+                      src={video.src}
+                      controls
+                      playsInline
+                      preload="metadata"
+                      className="w-full aspect-[9/16] object-cover"
+                    />
+                    <div className="p-2 sm:p-3 text-center">
+                      <p className="text-xs sm:text-sm font-semibold text-[var(--text-brown)] truncate">
+                        {video.title}
+                      </p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
             </div>
           </motion.div>
 

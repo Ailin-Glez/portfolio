@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { BookOpen, Music, Laugh, Camera, Calendar, Ticket } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -35,11 +35,12 @@ function HomePage() {
         <link rel="canonical" href="https://ailingonzalez.com/" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ailingonzalez.com/" />
-        <meta property="og:title" content="Ailin González" />
+        <meta property="og:title" content="Ailin González — Escritora, Comediante y Creadora" />
         <meta property="og:description" content="Bienvenido al mundo de Ailin González: donde la poesía se encuentra con la comedia, el ukelele con las palabras" />
         <meta property="og:image" content="https://ailingonzalez.com/og-image.jpg" />
+        <meta property="og:image:alt" content="Foto de Ailin González" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Ailin González" />
+        <meta name="twitter:title" content="Ailin González — Escritora, Comediante y Creadora" />
         <meta name="twitter:description" content="Bienvenido al mundo de Ailin González: donde la poesía se encuentra con la comedia, el ukelele con las palabras" />
         <meta name="twitter:image" content="https://ailingonzalez.com/og-image.jpg" />
         <script type="application/ld+json">{JSON.stringify([
@@ -65,6 +66,7 @@ function HomePage() {
               }
             },
             "performer": { "@type": "Person", "name": "Ailin González", "url": "https://ailingonzalez.com" },
+            "image": "https://ailingonzalez.com/desconectados.webp",
             "organizer": { "@type": "Organization", "name": "Latinos Comedy INC", "url": "https://latinoscomedy.com/" },
             "offers": {
               "@type": "Offer",
@@ -85,6 +87,7 @@ function HomePage() {
             src={photo}
             alt="Ailin González - Comedian, Writer, and Poet"
             className="w-full h-full object-cover object-[50%_49%]"
+            fetchpriority="high"
           />
           <div className="absolute inset-0 warm-overlay"></div>
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[var(--bg-cream)]/10 to-[var(--bg-cream)]/60"></div>
@@ -95,7 +98,7 @@ function HomePage() {
           className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8
              text-center flex flex-col
              pt-6 sm:pt-10 md:pt-20
-             md:translate-y-48"
+             md:translate-y-36"
         >
           <motion.div
             initial={{ opacity: 0, y: 30 }}

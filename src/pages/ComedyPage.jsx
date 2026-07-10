@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import { Laugh, SmilePlus, ChevronLeft, ChevronRight, Clapperboard } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useExclusiveVideo } from '@/hooks/useExclusiveVideo';
@@ -20,7 +20,15 @@ function ComedyPage() {
   useExclusiveVideo();
   const [currentMeme, setCurrentMeme] = useState(0);
 
-  const memes = [memeShakira, memeArtemis, memeSobreproteccion, memeTherian, memeRegalos, memeMatrimonio, memeTemu];
+  const memes = [
+    { src: memeShakira, alt: 'Meme de Ailin González sobre Shakira' },
+    { src: memeArtemis, alt: 'Meme de Ailin González sobre Artemis' },
+    { src: memeSobreproteccion, alt: 'Meme de Ailin González sobre la sobreprotección' },
+    { src: memeTherian, alt: 'Meme de Ailin González sobre los Therians' },
+    { src: memeRegalos, alt: 'Meme de Ailin González sobre los regalos' },
+    { src: memeMatrimonio, alt: 'Meme de Ailin González sobre el matrimonio' },
+    { src: memeTemu, alt: 'Meme de Ailin González sobre Temu' },
+  ];
 
   const chistes = [
     { src: chisteAfeitarse, title: 'Afeitarse' },
@@ -38,16 +46,17 @@ function ComedyPage() {
     <>
       <Helmet>
         <title>Comedia - Ailin González</title>
-        <meta name="description" content="El lado cómico de Ailin González: stand-up, humor" />
+        <meta name="description" content="El lado cómico de Ailin González: stand-up, memes, videos de humor y sketches en español. Comedia que mezcla el ukelele, la poesía y las ganas de reír." />
         <link rel="canonical" href="https://ailingonzalez.com/comedia" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ailingonzalez.com/comedia" />
         <meta property="og:title" content="Comedia - Ailin González" />
-        <meta property="og:description" content="El lado cómico de Ailin González: stand-up, humor" />
+        <meta property="og:description" content="El lado cómico de Ailin González: stand-up, memes, videos de humor y sketches en español. Comedia que mezcla el ukelele, la poesía y las ganas de reír." />
         <meta property="og:image" content="https://ailingonzalez.com/og-image.jpg" />
+        <meta property="og:image:alt" content="Foto de Ailin González" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Comedia - Ailin González" />
-        <meta name="twitter:description" content="El lado cómico de Ailin González: stand-up, humor" />
+        <meta name="twitter:description" content="El lado cómico de Ailin González: stand-up, memes, videos de humor y sketches en español. Comedia que mezcla el ukelele, la poesía y las ganas de reír." />
         <meta name="twitter:image" content="https://ailingonzalez.com/og-image.jpg" />
       </Helmet>
 
@@ -99,8 +108,8 @@ function ComedyPage() {
                   <AnimatePresence mode="wait">
                     <motion.img
                       key={currentMeme}
-                      src={memes[currentMeme]}
-                      alt={`Meme ${currentMeme + 1}`}
+                      src={memes[currentMeme].src}
+                      alt={memes[currentMeme].alt}
                       initial={{ opacity: 0, x: 40 }}
                       animate={{ opacity: 1, x: 0 }}
                       exit={{ opacity: 0, x: -40 }}

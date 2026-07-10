@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import { Heart, Sparkles, Mail, Send, Instagram, Youtube, Download, FileText, Image as ImageIcon } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useToast } from '@/components/ui/use-toast';
@@ -21,19 +21,6 @@ function AboutPage() {
     { icon: TikTokIcon, href: 'https://www.tiktok.com/@laquetocaelukelele_', label: 'TikTok', handle: '@laquetocaelukelele_' },
     { icon: Youtube, href: 'https://www.youtube.com/@laquetocaelukelele', label: 'YouTube', handle: '@laquetocaelukelele' },
   ];
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
   return (
     <>
       <Helmet>
@@ -45,6 +32,7 @@ function AboutPage() {
         <meta property="og:title" content="Sobre Mí - Ailin González" />
         <meta property="og:description" content="Conoce a Ailin González: comediante, escritora, poeta y creadora de contenido. Ponte en contacto para shows, colaboraciones o simplemente para decir hola." />
         <meta property="og:image" content="https://ailingonzalez.com/og-image.jpg" />
+        <meta property="og:image:alt" content="Foto de Ailin González" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Sobre Mí - Ailin González" />
         <meta name="twitter:description" content="Conoce a Ailin González: comediante, escritora, poeta y creadora de contenido. Ponte en contacto para shows, colaboraciones o simplemente para decir hola." />
@@ -108,9 +96,7 @@ function AboutPage() {
                 <div className="space-y-4 text-[var(--text-brown-light)] leading-relaxed">
                   <p>
                     Soy <strong className="text-[var(--text-brown)]">Ailín González, comediante, escritora, poeta y creadora de contenido</strong>.
-                    <p>
-                    Mi nombre artístico es <strong className="text-[var(--text-brown)]">"la que toca el ukelele"</strong> —suerte que tengo un ukelele (que no es una guitarrita pequeña), porque si no sería simplemente "la que toca". Hago humor desde la música, rimando versos y chistes mientras me hago la que canto.                  
-                  </p>
+                    Mi nombre artístico es <strong className="text-[var(--text-brown)]">"la que toca el ukelele"</strong> —suerte que tengo un ukelele (que no es una guitarrita pequeña), porque si no sería simplemente "la que toca". Hago humor desde la música, rimando versos y chistes mientras me hago la que canto.
                     Mi vida es un delicado equilibrio entre escribir versos melancólicos y hacer chistes sobre lo absurdo de la existencia.
                     Algunos días gana la poesía, otros gana la comedia. La mayoría de los días, gana el café.
                   </p>
@@ -200,10 +186,10 @@ function AboutPage() {
               <h3 className="text-xl font-bold text-[var(--text-brown)] mb-4">Fotos de prensa</h3>
               <div className="grid grid-cols-2 gap-4 mb-4">
                 <div className="relative overflow-hidden rounded-lg aspect-[3/4]">
-                  <img src={perfilImg} alt="Ailin González - Foto de prensa 1" className="w-full h-full object-cover" />
+                  <img src={perfilImg} alt="Ailin González - Foto de prensa 1" className="w-full h-full object-cover" loading="lazy" />
                 </div>
                 <div className="relative overflow-hidden rounded-lg aspect-[3/4]">
-                  <img src={posterImg} alt="Ailin González - Foto de prensa 2" className="w-full h-full object-cover" />
+                  <img src={posterImg} alt="Ailin González - Foto de prensa 2" className="w-full h-full object-cover" loading="lazy" />
                 </div>
               </div>
               <div className="flex flex-wrap gap-3">

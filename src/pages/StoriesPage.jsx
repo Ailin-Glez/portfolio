@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import { BookMarked, PenTool, Book, Feather, ChevronLeft, ChevronRight } from 'lucide-react';
 import { AnimatePresence } from 'framer-motion';
 import { motion } from 'framer-motion';
@@ -62,6 +62,7 @@ tu propia constelación.`,
         <meta property="og:title" content="Literatura - Ailin González" />
         <meta property="og:description" content="Poemas y cuentos de Ailin González. Descubre su libro 'Breve manual para esperar(te)'" />
         <meta property="og:image" content="https://ailingonzalez.com/og-image.jpg" />
+        <meta property="og:image:alt" content="Foto de Ailin González" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Literatura - Ailin González" />
         <meta name="twitter:description" content="Poemas y cuentos de Ailin González. Descubre su libro 'Breve manual para esperar(te)'" />
@@ -79,7 +80,7 @@ tu propia constelación.`,
           "inLanguage": "es",
           "genre": "Poesía",
           "description": "Un libro de poesía de amor que instala al lector en medio de una despedida, un viaje, dos amantes y una revisión pequeña y esencial de las emociones.",
-          "image": "https://ailingonzalez.com/og-image.jpg",
+          "image": "https://ailingonzalez.com/cubierta.webp",
           "offers": {
             "@type": "Offer",
             "url": "https://www.amazon.com/dp/B0GL9MXGF3",

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import { Camera, Image as ImageIcon } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Dialog, DialogContent } from '@/components/ui/dialog.jsx';
@@ -62,6 +62,7 @@ function GalleryPage() {
         <meta property="og:title" content="Galería - Ailin González" />
         <meta property="og:description" content="Galería fotográfica de Ailin González: momentos artísticos, performances y vida creativa." />
         <meta property="og:image" content="https://ailingonzalez.com/og-image.jpg" />
+        <meta property="og:image:alt" content="Foto de Ailin González" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Galería - Ailin González" />
         <meta name="twitter:description" content="Galería fotográfica de Ailin González: momentos artísticos, performances y vida creativa." />
