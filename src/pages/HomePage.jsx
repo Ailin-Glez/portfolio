@@ -152,8 +152,8 @@ function HomePage() {
         </div>
       </div>
 
-      {/* Shows del Mes */}
-      <section className="bg-[var(--bg-cream)] py-10 md:py-14">
+      {/* Shows del Mes — oculto hasta nuevos shows */}
+      {false && <section className="bg-[var(--bg-cream)] py-10 md:py-14">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -231,7 +231,7 @@ function HomePage() {
             ))}
           </div>
         </div>
-      </section>
+      </section>}
 
       <YouTubeSection />
     </>
